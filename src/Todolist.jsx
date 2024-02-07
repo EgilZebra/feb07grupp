@@ -30,9 +30,6 @@ const AddTodos = () => {
 
     const [inputValue, setInputValue] = useState('');
 
-    const [inputCount, setInputCount] = useState(0);
-
-   
 
     const addTask = () => {
         const newIdone = Math.max(...todos.map((todo) => todo.id), 0) + 1;
@@ -41,9 +38,6 @@ const AddTodos = () => {
         const newTask = {task: inputValue, id: newIdone};
         console.log(newTask)
         setTodos((prevTask) => [...prevTask, newTask]);
-
-        setInputCount(prevCount => prevCount + 1)
-
     }
 
     const removeTodo = (id) => {    
